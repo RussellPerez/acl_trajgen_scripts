@@ -28,4 +28,15 @@ function triple_trajgen_go() {
     go_all_drones.sh "$D1" "$D2" "$D3"
 }
 ```
-  
+3. Then source the bash file
+```
+source ~/.bashrc
+```
+4. You can now run the scripts using aliasing:
+```
+# Step 1: Launch and attach to tmux sessions
+triple_trajgen_mocap PX01 PX04 PX05
+
+# Step 2: After they're ready, start the drones
+triple_trajgen_go
+```
