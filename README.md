@@ -71,6 +71,3 @@ flyfull flight_2 PX04 PX05 PX06
 
 #Step 2: After they're ready, start the drones
 triple_trajgen_go
-
-
-
