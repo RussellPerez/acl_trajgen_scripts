@@ -31,7 +31,7 @@ SQ01:
 
       #Rectangle trajectory parameters
       side_a: 2.0  # length of one side (m) (horizontal?)
-      side_b: 4.0  # length of the other side (m) (vertical?)
+      side_b: 1.0  # length of the other side (m) (vertical?)
       rectangle_accel: 0.4  # max acceleration allowed, m/s^2
 
       # Circular trajectory parameters
