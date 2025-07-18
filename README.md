@@ -28,6 +28,28 @@ function triple_trajgen_go() {
     go_all_drones.sh "$D1" "$D2" "$D3"
 }
 ```
+```
+# General-purpose flight runner
+alias flyset='run_flight.sh'
+
+# For halfbay configuration (flight name and drones required)
+function flyhalf() {
+    if [ "$#" -ne 4 ]; then
+        echo "Usage: flyhalf flight_name DRONE1 DRONE2 DRONE3"
+        return 1
+    fi
+    run_flight.sh halfbay "$@"
+}
+
+# For fullbay configuration (flight name and drones required)
+function flyfull() {
+    if [ "$#" -ne 4 ]; then
+        echo "Usage: flyfull flight_name DRONE1 DRONE2 DRONE3"
+        return 1
+    fi
+    run_flight.sh fullbay "$@"
+}
+```
 3. Then source the bash file
 ```
 source ~/.bashrc
