@@ -4,6 +4,7 @@ scripts to run three drones at the same time
 1. Store launch_drones_tmux.sh, go_all_drones.sh, and run_flight.sh in ~/.local/bin
 2. find /.bashrc file and modify to contain the following aliases/functions:
 ```
+#starting up three drone tmux
 function triple_trajgen_mocap() {
     if [ "$#" -ne 3 ]; then      
         echo "Usage: triple_trajgen_mocap PX01 PX02 PX03"
@@ -16,8 +17,8 @@ function triple_trajgen_mocap() {
     # Run the tmux launch script
     launch_drones_tmux.sh "$1" "$2" "$3"
 }
-```
-```
+
+#same functionality as trajgen_go but for the three drones
 function triple_trajgen_go() {
     if [ ! -f ~/.active_drones ]; then
         echo "Error: No drones recorded. Run triple_trajgen_mocap first."
@@ -27,8 +28,7 @@ function triple_trajgen_go() {
     read -r D1 D2 D3 < ~/.active_drones
     go_all_drones.sh "$D1" "$D2" "$D3"
 }
-```
-```
+
 # General-purpose flight runner
 alias flyset='run_flight.sh'
 
