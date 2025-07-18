@@ -54,7 +54,7 @@ function flyfull() {
 ```
 source ~/.bashrc
 ```
-4. You can now run the scripts using aliasing:
+4. You can now run the scripts using aliasing. There are two different ways you can do this. The first way is for if you just want to launch the three drones as is without adjust their yaml files, i.e. you are not flying the predetermined flight experiment:
 ```
 # Step 1: Launch and attach to tmux sessions
 triple_trajgen_mocap PX01 PX04 PX05
@@ -62,3 +62,15 @@ triple_trajgen_mocap PX01 PX04 PX05
 # Step 2: After they're ready, start the drones
 triple_trajgen_go
 ```
+
+The second way is for when you are running the flight experiments:
+```
+#Step 1: determine if you are using just half of the highbay or the full highbay space, use either one
+flyhalf flight_1 PX01 PX02 PX03
+flyfull flight_2 PX04 PX05 PX06
+
+#Step 2: After they're ready, start the drones
+triple_trajgen_go
+
+
+
