@@ -6,7 +6,7 @@ SQ01:
       pub_freq: 100.0  # Hz
 
       # Type of trajectory
-      traj_type: T # Circle , Line , Boomerang , Figure8, Square, Reciprocating, Rectangle, Bounce, M, I, T
+      traj_type: Rectangle # Circle , Line , Boomerang , Figure8, Square, Reciprocating, Rectangle, Bounce, M, I, T
 
       # T trajectory parameters
       T_length: 3.0   # height of the T (vertical)
@@ -30,8 +30,8 @@ SQ01:
       orientation: 0.0  # rad, orientation of the square in the XY plane
 
       #Rectangle trajectory parameters
-      side_a: 2.0  # length of one side (m)
-      side_b: 4.0  # length of the other side (m)
+      side_a: 2.0  # length of one side (m) (horizontal?)
+      side_b: 4.0  # length of the other side (m) (vertical?)
       rectangle_accel: 0.4  # max acceleration allowed, m/s^2
 
       # Circular trajectory parameters
@@ -39,7 +39,7 @@ SQ01:
       center_x: 0.0  # m
       center_y: 0.0  # m
       # v_goals: [1.0, 2.0, 3.0, 4.0, 5.0]  # velocity magnitudes in increasing order, m/s
-      v_goals: [1.0, 2.0, 2.0]
+      v_goals: [0.5, 1.0, 1.5]
       t_traj: 80.0  # time to follow each trajectory, s
       circle_accel:  0.4  # max acceleration allowed, m/s^2. Should be small
 
