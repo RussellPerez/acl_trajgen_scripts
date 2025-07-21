@@ -9,6 +9,7 @@ fi
 
 BAY_MODE="$1"
 FLIGHT_NAME="$2"
+USER="swarm"
 MISSION_DIR="$HOME/mission_planner/missions/$BAY_MODE/$FLIGHT_NAME"
 REMOTE_YAML_PATH=~/code/trajgen_ws/src/trajectory_generator_ros2/config/default.yaml
 
