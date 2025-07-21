@@ -9,8 +9,7 @@ fi
 
 BAY_MODE="$1"
 FLIGHT_NAME="$2"
-MISSION_DIR="$HOME/missions/$BAY_MODE/$FLIGHT_NAME"
-USER=swarm
+MISSION_DIR="$HOME/mission_planner/missions/$BAY_MODE/$FLIGHT_NAME"
 REMOTE_YAML_PATH=~/code/trajgen_ws/src/trajectory_generator_ros2/config/default.yaml
 
 # Drones from arguments
