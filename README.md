@@ -54,6 +54,10 @@ function flyfull() {
 ```
 source ~/.bashrc
 ```
+also make them executable
+```
+chmod +x ~/.local/bin/*.sh
+```
 4. You can now run the scripts using aliasing. There are two different ways you can do this. The first way is for if you just want to launch the three drones as is without adjust their yaml files, i.e. you are not flying the predetermined flight experiment:
 ```
 # Step 1: Launch and attach to tmux sessions
