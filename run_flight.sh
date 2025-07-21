@@ -38,4 +38,4 @@ done
 
 # Launch mocap sessions
 echo "Launching trajgen_mocap on drones: ${DRONES[*]}"
-triple_trajgen_mocap "${DRONES[@]}"
+launch_drones_tmux.sh "${DRONES[@]}"
